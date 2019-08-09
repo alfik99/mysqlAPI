@@ -1,11 +1,12 @@
 const express = require('express');
 const bodyparser = require('body-parser');
-const qString = require('querystring');
+const cors = require('cors');
 const mysql = require('mysql');
 
 var app = express();
 
 app.use(bodyparser.json());
+app.use(cors());
 
 var mysqlConnection = mysql.createConnection({
     host: 'localhost',
